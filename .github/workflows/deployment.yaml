@@ -2,6 +2,20 @@
 name: alation publish
 on: push
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get code
+        uses: actions/checkout@v3
+      - name: install nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: testing
+        run: |
+          echo "testing in progress...."
+          sleep 5
+          echo "testing completed"
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -11,3 +25,9 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: deploy
+        run: |
+          echo "deployment in progress...."
+          sleep 5
+          echo "deployment completed"
+        
