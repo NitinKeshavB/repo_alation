@@ -2,6 +2,12 @@
 name: alation publish
 on: push
 jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: github context
+        run: echo "${{to_json(github)}}"
+
   test:
     runs-on: ubuntu-latest
     steps:
