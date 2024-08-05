@@ -17,6 +17,7 @@ jobs:
           sleep 5
           echo "testing completed"
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: get code
