@@ -50,6 +50,8 @@ DataCatalog_Objects:
       - "relationship"
       - "opportunity"
    publish_to_alation: "Yes"
+
+   
  - name : "company_psft"
    schema: "silver_global"
    application: "peoplesoft"
